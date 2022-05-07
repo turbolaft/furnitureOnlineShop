@@ -1,0 +1,221 @@
+.footer {
+    background-color: #ffffff;
+    // .footer__container
+
+    &__container {
+    }
+
+    // .footer__body
+
+    &__body {
+        border-top: 1px solid #d8d8d8;
+        display: grid;
+        grid-template-columns: 250px 1fr 290px;
+        padding: 80px 0;
+        column-gap: 80px;
+
+        @media (max-width: $md1+px) {
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr 290px;
+        }
+
+        @media (max-width: $md2+px) {
+            display: block;
+        }
+    }
+
+    // .footer__main
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @media (max-width: $md1+px) {
+            grid-column: span 2;
+            margin-bottom: 40px;
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {
+        margin-bottom: 16px;
+    }
+
+    // .footer__text
+
+    &__text {
+        color: $grayColor;
+        line-height: 150%;
+        margin-bottom: 16px;
+    }
+
+    // .footer__contacts
+
+    &__contacts {
+    }
+
+    // .footer__menu
+
+    &__menu {
+    }
+
+    // .footer__subscribe
+
+    &__subscribe {
+    }
+}
+
+.contacts-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    // .contacts-footer__item
+
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        line-height: 150%;
+        color: $grayColor;
+
+        &::before {
+            margin-right: 8px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $orangeColor;
+            }
+        }
+    }
+}
+.menu-footer {
+    @media (min-width: $md3+px) {
+        display: flex;
+    }
+
+    @media (max-width: $md2+px) {
+        margin-bottom: 40px;
+    }
+    // .menu-footer__column
+
+    &__column {
+        @media (min-width: $md3+px) {
+            flex: 0 1 33.333%;
+            &:not(:last-child) {
+                margin-right: 22px;
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: $md4+px) {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    // .menu-footer__title
+
+    &__title {
+        margin-bottom: 16px;
+        ._init & {
+            display: flex;
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            @extend ._icon-arrow-down;
+            &::before {
+                font-family: 'icons';
+                font-size: 14px;
+                transition: all .3s ease 0s;
+            }
+        }
+        &._active {
+            &::before {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    // .menu-footer__list
+
+    &__list {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    // .menu-footer__link
+
+    &__link {
+        color: $darkGreyColor;
+        transition: color .3s ease 0s;
+        line-height: 120%;
+        font-weight: 500;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $orangeColor;
+            }
+        }
+    }
+}
+.subscribe {
+
+    // .subscribe__title
+
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    // .subscribe__form
+
+    &__form {
+        display: flex;
+        flex: 1 1 auto;
+    }
+
+    // .subscribe__input
+
+    &__input {
+        flex: 1 1 auto;
+        padding: 0px 12px;
+        background: #F4F5F7;
+        color: #828282;
+    }
+
+    // .subscribe__button
+
+    &__button {
+        flex: 0 0 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        background-color: $orangeColor;
+        color: #fff;
+        margin-left: 4px;
+        transition: all .3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #9d6a4a;
+            }
+        }
+    }
+}

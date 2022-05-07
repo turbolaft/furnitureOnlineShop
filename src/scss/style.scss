@@ -20,51 +20,23 @@ $grayColor: #898989;
 $darkGreyColor: #616161;
 
 @import "nullStyle";
+@import "ui";
+
 body {
     font-family: $fontFamily;
     font-size: $fontSize + px;
     color: $mainColor;
-    overflow: hidden;
+    overflow-x: hidden;
 
     &._lock {
-        overflow: hidden;
+        // overflow: hidden;
     }
-}
-
-.show {
-    transform: translate(0px, 0px) !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-
-._container {
-    max-width: $maxWidthContainer + px;
-    padding: 0px 15px;
-    margin: 0 auto;
 }
 
 @import "header";
 @import "sidebar";
+@import "footer";
 
-.main__block {
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    width: 100%;
-    height: 100%;
-    transform: translateX(0);
-    transition: all .5s ease 0s;
-    
-
-    &._active {
-        @media (max-width: $md3+px) {
-            transform: translateX(-80%);
-        }
-    }
-}
 
 .main {
     width: 100%;

@@ -20,7 +20,6 @@ export function DropDawnMenu() {
             }
 
             if (!target.closest('.menu__item') && document.querySelectorAll('.menu__item._hover').length > 0) {
-                console.log('Yeep');
                 menuItem.forEach(item => {
                     item.classList.remove('_hover');
                 });
@@ -46,4 +45,6 @@ export function DropDawnMenu() {
         }
     }
 }
+
+
 
