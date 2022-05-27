@@ -43,3 +43,306 @@ body {
     height: 100%;
     background-color: aqua;
 }
+
+.page {
+    flex: 1 1 auto;
+    // .page__main-slider
+
+    &__main-slider {
+    }
+}
+.main-slider {
+
+    background-color: #FCF8F3;
+
+    // .main-slider__container
+
+    &__container {
+        position: relative;
+
+        @media (min-width: ($md2+px)) {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 100vw;
+                right: 376px;
+                height: 100%;
+                background-color: #F9F1E7;
+            }
+        }
+    }
+
+    // .main-slider__body
+
+    &__body {
+        padding-top: 140px;
+        padding-left: 307px;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: ($md1+px)) {
+            padding-left: 60px;
+        }
+
+        @media (max-width: ($md2+px)) {
+            padding-top: 80px;
+            padding-left: 0;
+        }
+
+        @media (max-width: ($md3+px)) {
+            padding-top: 50px;
+        }
+
+        @media (min-width: ($md2+px)) {
+            display: flex;
+        }
+    }
+
+    // .main-slider__content
+
+    &__content {
+        flex: 0 0 494/1240 * 100%;
+    }
+
+    // .main-slider__slider
+
+    &__slider {
+        
+    }
+}
+
+.content-main {
+    position: relative;
+    z-index: 5;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(255, 255, 255, 0.72);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media (min-width: ($md2+px)) {
+        padding: 60px;
+        background: rgba(255, 255, 255, 0.9);
+
+        @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+            background: rgba(255, 255, 255, 0.9);
+            background-filter: blur(31px);
+        }
+    }
+
+    // .content-main__title
+
+    &__title {
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 120%;
+        margin-bottom: 16px;
+
+        @media (max-width: $md1+px) {
+            font-size: 26px;
+        }
+    }
+
+    // .content-main__text
+
+    &__text {
+        font-size: 20px;
+        color: $grayColor;
+        font-weight: 500;
+        line-height: 150%;
+        margin-bottom: 48px;
+    }
+
+    // .content-main__button
+
+    &__button {
+        padding: 0 auto;
+        width: 100%;
+        color: #ffffff;
+        font-weight: 500;
+        min-height: 78px;
+        font-size: 20px;
+        background-color: $orangeColor;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: orange;
+            }
+        }
+    }
+}
+.slider-main {
+    display: flex;
+    flex-direction: column;
+
+    // .slider-main__controls
+
+    &__controls {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .slider-main__body
+
+    &__body {
+        
+    }
+
+    // .slider-main__inner
+
+    &__inner {
+    }
+
+    // .slider-main__slide
+
+    &__slide {
+        position: relative;
+        max-width: 901px;
+        width: 100%;
+        
+
+        &._active {
+
+            @media (min-width: ($md1+px)) {
+                transform: scale(1.04);
+            }
+
+            .slider-main__content {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: ($md2+px)) {
+            max-width: 100%;
+        }
+    }
+
+    &__slide img {
+        max-width: 100%;
+    }
+
+    // .slider-main__content
+
+    &__content {
+        color: inherit;
+        display: flex;
+        transform: scale(0);
+        flex-direction: column;
+        padding: 24px;
+        background: rgba(255, 255, 255, 0.9);
+        @media (min-width: $md3+px) {
+            position: absolute;
+            min-width: 350px;
+            right: 40px;
+            bottom: 40px;
+        }
+
+        @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+            background: rgba(255, 255, 255, 0.9);
+            background-filter: blur(31px);
+        }
+    }
+
+    // .slider-main__title
+
+    &__title {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: 4px;
+    }
+
+    // .slider-main__text
+
+    &__text {
+        line-height: 150%;
+        margin-bottom: 8px;
+        color: $grayColor;
+    }
+
+    // .slider-main__price
+
+    &__price {
+        display: flex;
+        flex-direction: row-reverse;
+        line-height: 150%;
+        align-items: center;
+        font-weight: 600;
+        justify-content: space-between;
+        font-size: 20px;
+        &::before {
+            margin-left: 10px;
+            font-size: 12px;
+        }
+    }
+}
+.controls-slider-main {
+    margin-bottom: 20px;
+
+    // .controls-slider-main__dots
+
+    &__dots {
+        display: flex;
+        align-items: center;
+    }
+
+    &__dot {
+        width: 27px;
+        height: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all .3s ease 0s;
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 4px;
+        }
+
+        &::after {
+            content: '';
+            width: 11px;
+            height: 11px;
+            background-color: #D8D8D8;
+            border-radius: 50%;
+            transition: all .3s ease 0s;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid $orangeColor;
+            transition: all .3s ease 0s;
+            border-radius: 50%;
+            transform: scale(0);
+        }
+    }
+
+    // .controls-slider-main__dot--active
+
+    &__dot--active {
+        &::before {
+            transform: scale(1);
+        }
+
+        &::after {
+            background-color: $orangeColor;
+        }
+    }
+
+    // .controls-slider-main__arrows
+
+    &__arrows {
+
+    }
+}
+
+
+
+

@@ -9,10 +9,19 @@
     max-width: $maxWidthContainer + px;
     padding: 0px 15px;
     margin: 0 auto;
+
+    @media (max-width: ($md2+px)) {
+        padding: 0px 0px;
+    }
+}
+
+.shifting {
+    transition: all .3s ease 0s;
 }
 
 .main__block {
-
+    position: absolute;
+    z-index: 20;
     width: 100%;
     height: 100%;
     transform: translateX(0);
@@ -20,7 +29,7 @@
     
 
     &._active {
-        @media (max-width: $md3+px) {
+        @media (max-width: ($md3+px)) {
             transform: translateX(-80%);
             overflow: hidden;
         }
@@ -33,7 +42,71 @@
     color: #000;
     font-weight: 700;
 
-    @media (max-width: $md1+px) {
+    @media (max-width: ($md1+px)) {
         font-size: 18px;
     }
+}
+
+.slider-arrows {
+    display: grid;
+    grid-template-columns: repeat(2, 48px);
+    gap: 8px;
+
+    @media (max-width: ($md3+px)) {
+        grid-template-columns: repeat(2, 32px);
+    }
+}
+.slider-arrow {
+    border-radius: 50%;
+    height: 48px;
+    background-color: rgba(232, 159, 113, 0.3);
+    color: $orangeColor;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    @media (max-width: ($md3+px)) {
+        height: 32px;
+        font-size: 8px;
+    }
+    // .slider-arrow__prev
+
+    &__prev {
+        transform: rotate(90deg);
+    }
+
+    // .slider-arrow__next
+
+    &__next {
+        transform: rotate(-90deg);
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: #fff;
+            background-color: rgba(232, 159, 113, 1);
+        }
+    }
+    
+    &._white {
+        box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.16);
+        background-color: #fff;
+        @media (any-hover: hover) {
+            background-color: $orangeColor;
+            color: #fff;
+        }
+    }
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    min-height: 48px;
 }

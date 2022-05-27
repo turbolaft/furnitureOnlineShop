@@ -5,12 +5,117 @@
 })
 <body>
     @@include('html/sidebar.html', {}) 
+    
+    <div class="main__block">
+        @@include('html/header.html', {})
 
-    @@include('html/header.html', {})
+        <main class="page">
+            <section class="page__main-slider main-slider">
+                <div class="main-slider__container _container">
+                    <!-- <div class="main-slider__info">
+                        <h1 class="main-slider__title">High-Quality
+                            Furniture Just
+                            For You</h1>
+                        <p class="main-slider__describes">
+                            Our furniture is made from selected and best quality materials that are suitable for your dream home
+                        </p>
+                        <div class="main-slider__button">Shop Now</div>
+                    </div> -->
 
-        <main class="main"></main>
 
-    @@include('html/footer.html', {})
+                    <!-- Here is the HTML structure for your slide with all tools-->
+                    <div class="main-slider__body">
+
+                        <div class="main-slider__slider slider-main">
+                            <div class="slider-main__controls controls-slider-main">
+                                <div class="controls-slider-main__dots">
+                                    
+                                </div>
+                                <div class="controls-slider-main__arrows slider-arrows">
+                                    <button type="button" class="slider-arrow slider-arrow__prev _icon-arrow-down"></button>
+                                    <button type="button" class="slider-arrow slider-arrow__next _icon-arrow-down"></button>
+                                </div>
+                            </div>
+
+                            <div class="slider-main__body">
+                                <div class="slider-main__inner">
+
+                                    <!-- U can change structure inside slider-main__slide-->
+                                    <div class="slider-main__slide">
+                                        <img src="img/main-slider-1.jpg" alt="Image">
+    
+                                        <a href="" class="slider-main__content">
+                                            <div class="slider-main__title">Bohauss</div>
+                                            <div class="slider-main__text">Luxury big sofa 2-seat</div>
+                                            <div class="slider-main__price _icon-arrow-link">Rp 17.000.000</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="slider-main__slide">
+                                        <img src="img/main-slider-1.jpg" alt="Image">
+    
+                                        <a href="" class="slider-main__content">
+                                            <div class="slider-main__title">Bohauss</div>
+                                            <div class="slider-main__text">Luxury big sofa 2-seat</div>
+                                            <div class="slider-main__price _icon-arrow-link">Rp 17.000.000</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="slider-main__slide">
+                                        <img src="img/main-slider-1.jpg" alt="Image">
+    
+                                        <a href="" class="slider-main__content">
+                                            <div class="slider-main__title">Bohauss</div>
+                                            <div class="slider-main__text">Luxury big sofa 2-seat</div>
+                                            <div class="slider-main__price _icon-arrow-link">Rp 17.000.000</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="slider-main__slide">
+                                        <img src="img/main-slider-1.jpg" alt="Image">
+    
+                                        <a href="" class="slider-main__content">
+                                            <div class="slider-main__title">Bohauss</div>
+                                            <div class="slider-main__text">Luxury big sofa 2-seat</div>
+                                            <div class="slider-main__price _icon-arrow-link">Rp 17.000.000</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="slider-main__slide">
+                                        <img src="img/main-slider-1.jpg" alt="Image">
+    
+                                        <a href="" class="slider-main__content">
+                                            <div class="slider-main__title">Bohauss</div>
+                                            <div class="slider-main__text">Luxury big sofa 2-seat</div>
+                                            <div class="slider-main__price _icon-arrow-link">Rp 17.000.000</div>
+                                        </a>
+                                    </div>
+
+                                    <div class="slider-main__slide">
+                                        <img src="img/main-slider-1.jpg" alt="Image">
+    
+                                        <a href="" class="slider-main__content">
+                                            <div class="slider-main__title">Bohauss</div>
+                                            <div class="slider-main__text">Luxury big sofa 2-seat</div>
+                                            <div class="slider-main__price _icon-arrow-link">Rp 17.000.000</div>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                    <!-- That's all -->
+
+                </div>
+            </section>
+        </main>
+
+        @@include('html/footer.html', {})
+    </div>
+
 
     <script src="js/app.min.js"></script>
 </body>
