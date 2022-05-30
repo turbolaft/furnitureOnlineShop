@@ -109,12 +109,10 @@ export class Slider {
                         (this.gap ? this.gap * this.slides.length : 0), this.slides.length - 1);
                     }
 
-
                     lastClone.addEventListener('transitionend', () => {
                         changeSliderToRealPositions(-(this.slides.length * changeToNumber(widthOfMainSlide)) - 
                         (this.gap ? this.gap * this.slides.length : 0), this.slides.length - 1);
-                    });
-                    
+                    });    
 
                 } else if (indexOfSLide == this.slides.length && this.isEndLess) {
 
@@ -122,13 +120,11 @@ export class Slider {
                         changeSliderToRealPositions(-(1 * changeToNumber(widthOfMainSlide)) - 
                         (this.gap ? this.gap : 0), 0);
                     }
-
                     
                     firstClone.addEventListener('transitionend', () => {
                         changeSliderToRealPositions(-(1 * changeToNumber(widthOfMainSlide)) - 
                         (this.gap ? this.gap : 0), 0);
                     });
-                    
 
                 } else if (indexOfSLide === 0 && this.isEndLess) {
 
@@ -137,10 +133,9 @@ export class Slider {
 
                 } else if (indexOfSLide === 0 && !this.isEndLess) {
                     this.slidesField.style.left = 0;
-                }
-
-                activeSlider(indexOfSLide);
+                } 
                 allowShift = true;
+                activeSlider(indexOfSLide);
             };
 
             const showIndexDot = index => {

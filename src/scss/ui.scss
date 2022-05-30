@@ -4,6 +4,13 @@
     visibility: visible !important;
 }
 
+._title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+}
+
 
 ._container {
     max-width: $maxWidthContainer + px;
@@ -109,4 +116,16 @@
     text-align: center;
     transition: all 0.3s ease 0s;
     min-height: 48px;
+
+    &__white {
+        color: $orangeColor;
+        background-color: #fff;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $orangeColor;
+                color: #fff;
+            }
+        }
+    }
 }
